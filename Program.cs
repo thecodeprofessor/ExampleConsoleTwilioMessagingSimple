@@ -1,4 +1,4 @@
-﻿// Before You Begin
+// Before You Begin
 // Instructions for Setting Up Twilio:
 // 1. Follow the instructions provided on your course Moodle page to set up your student Twilio account.
 //    Make sure to note down your Account SID, Auth Token, and Twilio phone number, as you'll need them later.
@@ -41,11 +41,11 @@ namespace ExampleConsoleTwilioMessagingSimple
             //SendMessage("phone_number_here", "Hello World");
 
             //Check for recieved messages and display them.
-            var messages = ReceiveMessages(delete: true);
-            foreach (var message in messages)
-            {
-                Console.WriteLine($"Received message from {message.From}: {message.Body}");
-            }
+            //var messages = ReceiveMessages(delete: true);
+            //foreach (var message in messages)
+            //{
+            //    Console.WriteLine($"Received message from {message.From}: {message.Body}");
+            //}
         }
 
         // Method to send a message
