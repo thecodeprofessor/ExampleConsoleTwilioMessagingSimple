@@ -1,4 +1,4 @@
-﻿// Before You Begin
+// Before You Begin
 // Instructions for Setting Up Twilio:
 // 1. Follow the instructions provided on your course Moodle page to set up your student Twilio account.
 //    Make sure to note down your Account SID, Auth Token, and Twilio phone number, as you'll need them later.
