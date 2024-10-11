@@ -38,18 +38,18 @@ namespace ExampleConsoleTwilioMessagingSimple
             TwilioClient.Init(twilioAccountId, twilioAuthToken);
 
             //Send a "Hello World" message to a specified phone number in the format of +1XXXXXXXXX.
-            //SendMessage("phone_number_here", "Hello World");
+            //SendTextMessage("phone_number_here", "Hello World");
 
             //Check for recieved messages and display them.
-            var messages = ReceiveMessages(delete: true);
-            foreach (var message in messages)
-            {
-                Console.WriteLine($"Received message from {message.From}: {message.Body}");
-            }
+            //var messages = ReceiveTextMessages(delete: true);
+            //foreach (var message in messages)
+            //{
+            //    Console.WriteLine($"Received message from {message.From}: {message.Body}");
+            //}
         }
 
         // Method to send a message
-        public static void SendMessage(string recipientNumber, string messageBody)
+        public static void SendTextMessage(string recipientNumber, string messageBody)
         {
             var sentMessage = Message.Create(
                 to: new PhoneNumber(recipientNumber),
@@ -62,7 +62,7 @@ namespace ExampleConsoleTwilioMessagingSimple
         }
 
         // Method to receive messages
-        public static List<Message> ReceiveMessages(bool delete)
+        public static List<Message> ReceiveTextMessages(bool delete)
         {
             var messages = Message.Read(to: new PhoneNumber(twilioPhoneNumber), limit: 10);
 
